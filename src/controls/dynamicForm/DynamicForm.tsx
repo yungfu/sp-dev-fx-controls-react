@@ -238,7 +238,7 @@ export class DynamicForm extends React.Component<IDynamicFormProps, IDynamicForm
 
       }
       // Otherwise, depending on the content type ID of the item, if any, we need to behave accordingly
-      else if (contentTypeId === undefined || contentTypeId === '') {
+      else if (!(contentTypeId === undefined || contentTypeId === '')) {
          if (!contentTypeId.startsWith('0x0120')) {
             // We are adding a new list item
             try {
